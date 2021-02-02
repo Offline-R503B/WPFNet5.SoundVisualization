@@ -1,4 +1,4 @@
-# Project Description
+# Project Description (Ported to Net5 by Offline , Demos not included! )
 
 <img src="docs/Home_wpfsvlnew_4.png" width="300"> 
 
