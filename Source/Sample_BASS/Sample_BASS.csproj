@@ -114,12 +114,6 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WPFSoundVisualizationLibrary\WPFSoundVisualizationLib.csproj">
-      <Project>{90F96222-1C39-4A19-ABE8-1B00FB330985}</Project>
-      <Name>WPFSoundVisualizationLib</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="bass.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

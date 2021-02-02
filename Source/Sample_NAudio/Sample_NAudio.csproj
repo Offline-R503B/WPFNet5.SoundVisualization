@@ -122,12 +122,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\WPFSoundVisualizationLibrary\WPFSoundVisualizationLib.csproj">
-      <Project>{90F96222-1C39-4A19-ABE8-1B00FB330985}</Project>
-      <Name>WPFSoundVisualizationLib</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
