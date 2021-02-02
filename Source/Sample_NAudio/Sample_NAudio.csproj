@@ -122,6 +122,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TestingNet5\WPFSoundVisualizationLibNet5.csproj">
+      <Project>{daba3d12-fb99-49b8-bc52-bea9d9fd2252}</Project>
+      <Name>WPFSoundVisualizationLibNet5</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
