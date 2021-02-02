@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Album Art Display\NoArtwork.png" />
+    <None Remove="Album Art Display\Overlay.png" />
+    <None Remove="Album Art Display\Underlay.png" />
+    <None Remove="Album Art Display\WPFSoundVisualizationLib.AlbumArtDisplay.Icon.Large.png" />
+    <None Remove="Spectrum Analyzer\WPFSoundVisualizationLib.SpectrumAnalyzer.Icon.Large.png" />
+    <None Remove="WaveForm Timeline\WPFSoundVisualizationLib.WaveformTimeline.Icon.Large.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Album Art Display\WPFSoundVisualizationLib.AlbumArtDisplay.Icon.Large.png" />
+    <EmbeddedResource Include="Spectrum Analyzer\WPFSoundVisualizationLib.SpectrumAnalyzer.Icon.Large.png" />
+    <EmbeddedResource Include="WaveForm Timeline\WPFSoundVisualizationLib.WaveformTimeline.Icon.Large.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Album Art Display\NoArtwork.png" />
+    <Resource Include="Album Art Display\Overlay.png" />
+    <Resource Include="Album Art Display\Underlay.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+</Project>
