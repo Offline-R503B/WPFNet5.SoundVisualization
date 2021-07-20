@@ -6,8 +6,8 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <PlatformTarget>x86</PlatformTarget>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,15 +25,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="ManagedBass" Version="3.0.0" />
+    <PackageReference Include="NAudio" Version="1.10.0" />
+    <PackageReference Include="taglib-sharp-netstandard2.0" Version="2.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\TestingNet5\WPFSoundVisualizationLibNet5.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="NAudio">
-      <HintPath>NAudio.dll</HintPath>
-    </Reference>
-    <Reference Include="taglib-sharp">
-      <HintPath>taglib-sharp.dll</HintPath>
+    <Reference Include="Bass.Net">
+      <HintPath>Bass.Net.dll</HintPath>
     </Reference>
   </ItemGroup>
 
@@ -56,11 +59,25 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="bass.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Bass.Net.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="bass_aac.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
     <Page Update="ExpressionDark.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Update="ExpressionLight.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>

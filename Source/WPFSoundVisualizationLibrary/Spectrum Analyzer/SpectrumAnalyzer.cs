@@ -1,22 +1,22 @@
-﻿// Copyright (C) 2011 - 2012, Jacob Johnston 
+﻿// Copyright (C) 2011 - 2012, Jacob Johnston
 //
-// Permission is hereby granted, free of charge, to any person obtaining a 
-// copy of this software and associated documentation files (the "Software"), 
-// to deal in the Software without restriction, including without limitation 
-// the rights to use, copy, modify, merge, publish, distribute, sublicense, 
-// and/or sell copies of the Software, and to permit persons to whom the 
-// Software is furnished to do so, subject to the following conditions: 
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the "Software"),
+// to deal in the Software without restriction, including without limitation
+// the rights to use, copy, modify, merge, publish, distribute, sublicense,
+// and/or sell copies of the Software, and to permit persons to whom the
+// Software is furnished to do so, subject to the following conditions:
 //
-// The above copyright notice and this permission notice shall be included in 
-// all copies or substantial portions of the Software. 
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
 //
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL 
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
-// DEALINGS IN THE SOFTWARE. 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+// DEALINGS IN THE SOFTWARE.
 
 
 using System;
@@ -36,7 +36,7 @@ namespace WPFSoundVisualizationLib
     [DisplayName("Spectrum Analyzer")]
     [Description("Displays audio level and frequency data.")]
     [ToolboxItem(true)]
-    [TemplatePart(Name = "PART_SpectrumCanvas", Type = typeof(Canvas))]     
+    [TemplatePart(Name = "PART_SpectrumCanvas", Type = typeof(Canvas))]
     public class SpectrumAnalyzer : Control
     {
         #region Fields
@@ -69,7 +69,7 @@ namespace WPFSoundVisualizationLib
         #region Dependency Properties
         #region MaximumFrequency
         /// <summary>
-        /// Identifies the <see cref="MaximumFrequency" /> dependency property. 
+        /// Identifies the <see cref="MaximumFrequency" /> dependency property.
         /// </summary>
         public static readonly DependencyProperty MaximumFrequencyProperty = DependencyProperty.Register("MaximumFrequency", typeof(int), typeof(SpectrumAnalyzer), new UIPropertyMetadata(20000, OnMaximumFrequencyChanged, OnCoerceMaximumFrequency));
 
@@ -133,7 +133,7 @@ namespace WPFSoundVisualizationLib
 
         #region Minimum Frequency
         /// <summary>
-        /// Identifies the <see cref="MinimumFrequency" /> dependency property. 
+        /// Identifies the <see cref="MinimumFrequency" /> dependency property.
         /// </summary>
         public static readonly DependencyProperty MinimumFrequencyProperty = DependencyProperty.Register("MinimumFrequency", typeof(int), typeof(SpectrumAnalyzer), new UIPropertyMetadata(20, OnMinimumFrequencyChanged, OnCoerceMinimumFrequency));
 
@@ -197,7 +197,7 @@ namespace WPFSoundVisualizationLib
 
         #region BarCount
         /// <summary>
-        /// Identifies the <see cref="BarCount" /> dependency property. 
+        /// Identifies the <see cref="BarCount" /> dependency property.
         /// </summary>
         public static readonly DependencyProperty BarCountProperty = DependencyProperty.Register("BarCount", typeof(int), typeof(SpectrumAnalyzer), new UIPropertyMetadata(32, OnBarCountChanged, OnCoerceBarCount));
 
@@ -260,7 +260,7 @@ namespace WPFSoundVisualizationLib
 
         #region BarSpacing
         /// <summary>
-        /// Identifies the <see cref="BarSpacing" /> dependency property. 
+        /// Identifies the <see cref="BarSpacing" /> dependency property.
         /// </summary>
         public static readonly DependencyProperty BarSpacingProperty = DependencyProperty.Register("BarSpacing", typeof(double), typeof(SpectrumAnalyzer), new UIPropertyMetadata(5.0d, OnBarSpacingChanged, OnCoerceBarSpacing));
 
@@ -321,7 +321,7 @@ namespace WPFSoundVisualizationLib
 
         #region PeakFallDelay
         /// <summary>
-        /// Identifies the <see cref="PeakFallDelay" /> dependency property. 
+        /// Identifies the <see cref="PeakFallDelay" /> dependency property.
         /// </summary>
         public static readonly DependencyProperty PeakFallDelayProperty = DependencyProperty.Register("PeakFallDelay", typeof(int), typeof(SpectrumAnalyzer), new UIPropertyMetadata(10, OnPeakFallDelayChanged, OnCoercePeakFallDelay));
 
@@ -385,7 +385,7 @@ namespace WPFSoundVisualizationLib
 
         #region IsFrequencyScaleLinear
         /// <summary>
-        /// Identifies the <see cref="IsFrequencyScaleLinear" /> dependency property. 
+        /// Identifies the <see cref="IsFrequencyScaleLinear" /> dependency property.
         /// </summary>
         public static readonly DependencyProperty IsFrequencyScaleLinearProperty = DependencyProperty.Register("IsFrequencyScaleLinear", typeof(bool), typeof(SpectrumAnalyzer), new UIPropertyMetadata(false, OnIsFrequencyScaleLinearChanged, OnCoerceIsFrequencyScaleLinear));
 
@@ -450,7 +450,7 @@ namespace WPFSoundVisualizationLib
 
         #region BarHeightScaling
         /// <summary>
-        /// Identifies the <see cref="BarHeightScaling" /> dependency property. 
+        /// Identifies the <see cref="BarHeightScaling" /> dependency property.
         /// </summary>
         public static readonly DependencyProperty BarHeightScalingProperty = DependencyProperty.Register("BarHeightScaling", typeof(BarHeightScalingStyles), typeof(SpectrumAnalyzer), new UIPropertyMetadata(BarHeightScalingStyles.Decibel, OnBarHeightScalingChanged, OnCoerceBarHeightScaling));
 
@@ -510,7 +510,7 @@ namespace WPFSoundVisualizationLib
 
         #region AveragePeaks
         /// <summary>
-        /// Identifies the <see cref="AveragePeaks" /> dependency property. 
+        /// Identifies the <see cref="AveragePeaks" /> dependency property.
         /// </summary>
         public static readonly DependencyProperty AveragePeaksProperty = DependencyProperty.Register("AveragePeaks", typeof(bool), typeof(SpectrumAnalyzer), new UIPropertyMetadata(false, OnAveragePeaksChanged, OnCoerceAveragePeaks));
 
@@ -551,7 +551,7 @@ namespace WPFSoundVisualizationLib
         }
 
         /// <summary>
-        /// Gets or sets a value indicating whether each bar's peak 
+        /// Gets or sets a value indicating whether each bar's peak
         /// value will be averaged with the previous bar's peak.
         /// This creates a smoothing effect on the bars.
         /// </summary>
@@ -572,7 +572,7 @@ namespace WPFSoundVisualizationLib
 
         #region BarStyle
         /// <summary>
-        /// Identifies the <see cref="BarStyle" /> dependency property. 
+        /// Identifies the <see cref="BarStyle" /> dependency property.
         /// </summary>
         public static readonly DependencyProperty BarStyleProperty = DependencyProperty.Register("BarStyle", typeof(Style), typeof(SpectrumAnalyzer), new UIPropertyMetadata(null, OnBarStyleChanged, OnCoerceBarStyle));
 
@@ -631,7 +631,7 @@ namespace WPFSoundVisualizationLib
 
         #region PeakStyle
         /// <summary>
-        /// Identifies the <see cref="PeakStyle" /> dependency property. 
+        /// Identifies the <see cref="PeakStyle" /> dependency property.
         /// </summary>
         public static readonly DependencyProperty PeakStyleProperty = DependencyProperty.Register("PeakStyle", typeof(Style), typeof(SpectrumAnalyzer), new UIPropertyMetadata(null, OnPeakStyleChanged, OnCoercePeakStyle));
 
@@ -692,7 +692,7 @@ namespace WPFSoundVisualizationLib
 
         #region ActualBarWidth
         /// <summary>
-        /// Identifies the <see cref="ActualBarWidth" /> dependency property. 
+        /// Identifies the <see cref="ActualBarWidth" /> dependency property.
         /// </summary>
         public static readonly DependencyProperty ActualBarWidthProperty = DependencyProperty.Register("ActualBarWidth", typeof(double), typeof(SpectrumAnalyzer), new UIPropertyMetadata(0.0d, OnActualBarWidthChanged, OnCoerceActualBarWidth));
 
@@ -751,7 +751,7 @@ namespace WPFSoundVisualizationLib
 
         #region RefreshRate
         /// <summary>
-        /// Identifies the <see cref="RefreshInterval" /> dependency property. 
+        /// Identifies the <see cref="RefreshInterval" /> dependency property.
         /// </summary>
         public static readonly DependencyProperty RefreshIntervalProperty = DependencyProperty.Register("RefreshInterval", typeof(int), typeof(SpectrumAnalyzer), new UIPropertyMetadata(defaultUpdateInterval, OnRefreshIntervalChanged, OnCoerceRefreshInterval));
 
@@ -810,12 +810,12 @@ namespace WPFSoundVisualizationLib
             {
                 SetValue(RefreshIntervalProperty, value);
             }
-        }               
+        }
         #endregion
 
         #region FFTComplexity
         /// <summary>
-        /// Identifies the <see cref="FFTComplexity" /> dependency property. 
+        /// Identifies the <see cref="FFTComplexity" /> dependency property.
         /// </summary>
         public static readonly DependencyProperty FFTComplexityProperty = DependencyProperty.Register("FFTComplexity", typeof(FFTDataSize), typeof(SpectrumAnalyzer), new UIPropertyMetadata(FFTDataSize.FFT2048, OnFFTComplexityChanged, OnCoerceFFTComplexity));
 
@@ -841,7 +841,7 @@ namespace WPFSoundVisualizationLib
         /// <param name="value">The value that was set on <see cref="FFTComplexity"/></param>
         /// <returns>The adjusted value of <see cref="FFTComplexity"/></returns>
         protected virtual FFTDataSize OnCoerceFFTComplexity(FFTDataSize value)
-        {            
+        {
             return value;
         }
 
@@ -886,18 +886,18 @@ namespace WPFSoundVisualizationLib
             spectrumCanvas = GetTemplateChild("PART_SpectrumCanvas") as Canvas;
             spectrumCanvas.SizeChanged += spectrumCanvas_SizeChanged;
             UpdateBarLayout();
-        }        
+        }
 
         /// <summary>
-        /// Called whenever the control's template changes. 
+        /// Called whenever the control's template changes.
         /// </summary>
         /// <param name="oldTemplate">The old template</param>
         /// <param name="newTemplate">The new template</param>
         protected override void OnTemplateChanged(ControlTemplate oldTemplate, ControlTemplate newTemplate)
         {
             base.OnTemplateChanged(oldTemplate, newTemplate);
-            if (spectrumCanvas != null)            
-                spectrumCanvas.SizeChanged -= spectrumCanvas_SizeChanged;        
+            if (spectrumCanvas != null)
+                spectrumCanvas.SizeChanged -= spectrumCanvas_SizeChanged;
         }
         #endregion
 
@@ -937,8 +937,8 @@ namespace WPFSoundVisualizationLib
 
         #region Event Overrides
         /// <summary>
-        /// When overridden in a derived class, participates in rendering operations that are directed by the layout system. 
-        /// The rendering instructions for this element are not used directly when this method is invoked, and are 
+        /// When overridden in a derived class, participates in rendering operations that are directed by the layout system.
+        /// The rendering instructions for this element are not used directly when this method is invoked, and are
         /// instead preserved for later asynchronous use by layout and drawing.
         /// </summary>
         /// <param name="dc">The drawing instructions for a specific element. This context is provided to the layout system.</param>

@@ -3,14 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFSoundVisualizationLibNet5", "TestingNet5\WPFSoundVisualizationLibNet5.csproj", "{DABA3D12-FB99-49B8-BC52-BEA9D9FD2252}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFSoundVisualizationLibNet5", "TestingNet5\WPFSoundVisualizationLibNet5.csproj", "{DABA3D12-FB99-49B8-BC52-BEA9D9FD2252}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{FB11EB4A-30A3-4D5C-9A8D-A8D900240CC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo", "Demo\Demo.csproj", "{FB11EB4A-30A3-4D5C-9A8D-A8D900240CC6}"
 	ProjectSection(ProjectDependencies) = postProject
 		{DABA3D12-FB99-49B8-BC52-BEA9D9FD2252} = {DABA3D12-FB99-49B8-BC52-BEA9D9FD2252}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample_NAudio", "Sample_NAudio\Sample_NAudio.csproj", "{FB33403B-8CD4-490A-B740-6D5A5D932318}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WolvenKitDemo", "WolvenKitDemo\WolvenKitDemo.csproj", "{A97772EA-4001-4C18-AAB8-02DEEE8B66C6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DABA3D12-FB99-49B8-BC52-BEA9D9FD2252} = {DABA3D12-FB99-49B8-BC52-BEA9D9FD2252}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +61,18 @@ Global
 		{FB33403B-8CD4-490A-B740-6D5A5D932318}.Release|Mixed Platforms.Build.0 = Release|x86
 		{FB33403B-8CD4-490A-B740-6D5A5D932318}.Release|x86.ActiveCfg = Release|x86
 		{FB33403B-8CD4-490A-B740-6D5A5D932318}.Release|x86.Build.0 = Release|x86
+		{A97772EA-4001-4C18-AAB8-02DEEE8B66C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A97772EA-4001-4C18-AAB8-02DEEE8B66C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A97772EA-4001-4C18-AAB8-02DEEE8B66C6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A97772EA-4001-4C18-AAB8-02DEEE8B66C6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A97772EA-4001-4C18-AAB8-02DEEE8B66C6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A97772EA-4001-4C18-AAB8-02DEEE8B66C6}.Debug|x86.Build.0 = Debug|Any CPU
+		{A97772EA-4001-4C18-AAB8-02DEEE8B66C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A97772EA-4001-4C18-AAB8-02DEEE8B66C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A97772EA-4001-4C18-AAB8-02DEEE8B66C6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{A97772EA-4001-4C18-AAB8-02DEEE8B66C6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{A97772EA-4001-4C18-AAB8-02DEEE8B66C6}.Release|x86.ActiveCfg = Release|Any CPU
+		{A97772EA-4001-4C18-AAB8-02DEEE8B66C6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

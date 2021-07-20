@@ -30,7 +30,7 @@ namespace Sample_NAudio
         private bool inChannelSet;
         private WaveOut waveOutDevice;
         private WaveStream activeStream;
-        private WaveChannel32 inputStream;
+        private NAudio.Wave.WaveChannel32 inputStream;
         private SampleAggregator sampleAggregator;
         private SampleAggregator waveformAggregator;
         private string pendingWaveformPath;        
